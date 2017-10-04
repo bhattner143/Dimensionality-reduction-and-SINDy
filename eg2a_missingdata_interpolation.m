@@ -19,10 +19,10 @@ markers=struct(f1,tdata',f4,Morigin,f3,[mM nM],f2,M);
 markerfields=fieldnames(markers);
 %% Fill missing cells by interpolation
  for jj=1:nM
-     jj
+      jj
     markerObj=iddata((markers(1).(markerfields{4})(:,jj)),[],0.01);
      markerObj1=misdata(markerObj);
-     markerObj1=detrend(markerObj1);t
+     markerObj1=detrend(markerObj1);
      markerobj2=fft(markerObj1);
      temp1(:,jj)= markerObj1.OutputData;
      temp2(:,jj)=markerobj2.OutputData;
